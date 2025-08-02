@@ -1,0 +1,181 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  background-color: var(--dark-bg-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.dashboard-container h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}
+
+.dashboard-container p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 750px;
+  text-align: left;
+  border: 1px solid var(--input-border-color);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-size: 2.2rem;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.account-summary .balance {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+.loan-form .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.loan-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #bbbbbb;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.loan-form input[type="number"] {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #3a3a3a;
+  color: white;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loan-form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 255, 0, 0.2);
+}
+
+.loan-form .btn-primary {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--dark-bg-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.3);
+}
+
+.loan-form .btn-primary:hover {
+  background-color: var(--primary-dark-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+}
+
+.info-message, .success-message-form, .error-message-form {
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.info-message {
+  background-color: rgba(25, 118, 210, 0.2); /* Azul mais suave */
+  color: #64b5f6;
+  border: 1px solid #1976d2;
+}
+
+.success-message-form {
+  background-color: rgba(0, 255, 0, 0.2);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.error-message-form {
+  background-color: rgba(255, 102, 102, 0.2);
+  color: #ff6666;
+  border: 1px solid #d32f2f;
+}
+
+.loan-history-section {
+  margin-top: 2.5rem;
+}
+
+.loan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.loan-item {
+  background-color: #3a3a3a;
+  border: 1px solid #5a5a5a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.loan-item p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.status {
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.status-pending {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ffc107;
+}
+
+.status-approved {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.status-rejected {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.status-paid {
+  background-color: rgba(0, 188, 212, 0.2);
+  color: #00bcd4;
+}

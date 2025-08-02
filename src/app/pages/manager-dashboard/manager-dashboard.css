@@ -1,0 +1,154 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  background-color: var(--dark-bg-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.dashboard-container h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}
+
+.dashboard-container p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.dashboard-section {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.dashboard-section h3 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.no-data-message {
+  color: #888;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.list-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid var(--input-border-color);
+}
+
+.client-card h4, .loan-card h4 {
+  color: #e0e0e0;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.client-card p, .loan-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+.status {
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.status-pending {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ffc107;
+}
+
+.status-approved {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.status-rejected {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.status-paid {
+  background-color: rgba(0, 188, 212, 0.2);
+  color: #00bcd4;
+}
+
+.card-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+
+.btn-success {
+  background-color: var(--primary-color);
+  color: var(--dark-bg-color);
+}
+
+.btn-success:hover {
+  background-color: var(--primary-dark-color);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

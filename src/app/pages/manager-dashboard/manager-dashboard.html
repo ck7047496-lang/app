@@ -1,0 +1,50 @@
+<div class="dashboard-container">
+  <h2>Bem-vindo(a), Gerente!</h2>
+  <p>Aqui você pode revisar e aprovar solicitações de cadastro e empréstimos.</p>
+
+  <section class="dashboard-section">
+    <h3>Solicitações de Cadastro Pendentes</h3>
+    @if (pendingClients().length === 0) {
+      <p class="no-data-message">Nenhuma solicitação de cadastro pendente no momento.</p>
+    } @else {
+      <div class="list-cards">
+        @for (client of pendingClients(); track client.id) {
+          <div class="card client-card">
+            <h4>{{ client.name }}</h4>
+            <p><strong>Email:</strong> {{ client.email }}</p>
+            <p><strong>CPF:</strong> {{ client.cpf }}</p>
+            <p><strong>Status:</strong> <span class="status status-{{ client.status | lowercase }}">{{ client.status }}</span></p>
+            <div class="card-actions">
+              <button (click)="approveClient(client.id)" class="btn btn-success">Aprovar</button>
+              <button (click)="rejectClient(client.id)" class="btn btn-danger">Rejeitar</button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </section>
+
+  <section class="dashboard-section">
+    <h3>Solicitações de Empréstimo Pendentes</h3>
+    @if (pendingLoans().length === 0) {
+      <p class="no-data-message">Nenhuma solicitação de empréstimo pendente no momento.</p>
+    } @else {
+      <div class="list-cards">
+        @for (loan of pendingLoans(); track loan.id) {
+          <div class="card loan-card">
+            <h4>Empréstimo ID: {{ loan.id }}</h4>
+            <p><strong>Cliente Email:</strong> {{ loan.client?.email || 'N/A' }}</p>
+            <p><strong>Valor:</strong> {{ loan.amount | currency:'BRL':'symbol':'1.2-2' }}</p>
+            <p><strong>Parcelas:</strong> {{ loan.installments }}</p>
+            <p><strong>Juros:</strong> {{ loan.interestRate * 100 }}%</p>
+            <p><strong>Status:</strong> <span class="status status-{{ loan.status | lowercase }}">{{ loan.status }}</span></p>
+            <div class="card-actions">
+              <button (click)="approveLoan(loan.id)" class="btn btn-success">Aprovar</button>
+              <button (click)="rejectLoan(loan.id)" class="btn btn-danger">Rejeitar</button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </section>
+</div>

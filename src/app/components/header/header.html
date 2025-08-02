@@ -1,0 +1,21 @@
+<header class="header-container">
+  <nav class="main-nav">
+    <a class="nav-brand" routerLink="/">Banco Digital</a>
+    <ul class="nav-list">
+      <li><a routerLink="/home">Home</a></li>
+      @if (!isAuthenticated()) {
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Cadastre-se</a></li>
+      }
+      @if (isAuthenticated()) {
+        @if (userRole() === 'CLIENT') {
+          <li><a routerLink="/client-dashboard">Meu Painel</a></li>
+        }
+        @if (userRole() === 'MANAGER') {
+          <li><a routerLink="/manager-dashboard">Painel do Gerente</a></li>
+        }
+        <li><button (click)="onLogout()" class="btn-logout">Sair</button></li>
+      }
+    </ul>
+  </nav>
+</header>

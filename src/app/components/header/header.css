@@ -1,0 +1,60 @@
+.header-container {
+  background-color: #0d0d0d; /* Um tom de cinza bem escuro para o cabeçalho */
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2); /* Sombra neon */
+  border-bottom: 1px solid #00ff00; /* Linha de fundo neon */
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Verde neon */
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: rgba(0, 255, 0, 0.2); /* Fundo sutilmente neon no hover */
+  color: var(--primary-color); /* Texto neon no hover */
+}
+
+.btn-logout {
+  background-color: #d32f2f; /* Vermelho para o botão de sair */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b71c1c;
+}
